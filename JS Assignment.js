@@ -123,3 +123,5 @@ function LeapYear(year) {
   }
 }
 LeapYear(2020)
+
+function TimeOfDay(greet)
