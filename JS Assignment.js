@@ -117,11 +117,62 @@ if (TicketAge < 12) {
 
 function LeapYear(year) {
   if (year % 400 === 0 && year % 100 === 0 && year % 4 === 0) {
-    alert(`${year} is a Leap year`)
+    alert(`${year} is a Leap year`);
   } else {
-    console.log(`${year} is not a leap year `)
+    console.log(`${year} is not a leap year `);
   }
 }
-LeapYear(2020)
+LeapYear(2020);
 
-function TimeOfDay(greet)
+let myDate = new Date();
+let hrs = myDate.getHours();
+
+if (hrs < 12) {
+  alert("Good morning");
+} else if (hrs >= 12 && hrs <= 17) {
+  alert("Good afternoon");
+} else if (hrs >= 17 && hrs <= 24) {
+  alert("Good Evening");
+}
+
+function BMI(height, weight) {
+
+  let BMI = weight / (height * height);
+  BMI = BMI.toFixed(2);
+  if (isNaN(BMI)) {
+    alert("Please enter valid height and weight values");
+  } else {
+    console.log(`Your BMI is ${BMI}`);
+  }
+}
+
+// Generate a Random Number
+let secretNum = 15;
+let guess;
+let guessNumber = prompt("Enter any number: ");
+for (guess = 0; guess < 3; guess++) {
+  if (guessNumber > secretNum) {
+    alert("Try again");
+    guessNumber = prompt("Enter number again: ");
+  } else if (guessNumber < secretNum) {
+    alert("Nope");
+    guessNumber = prompt("Enter number again: ");
+  } else if (guessNumber == secretNum) {
+    alert("You're right");
+    guessNumber = prompt("Enter number again: ");
+  } else {
+    guessNumber = prompt("Enter number again: ")
+  }
+}
+
+let string = prompt("Enter a string: ")
+let string = []
+let rightString= [].reverse 
+function isPalindrome(string) {
+  for  (string == rightString.reverse) {
+    alert("This string is a palindrome")
+  } 
+  }
+
+  return true;
+console.log(isPalindrome("Mallam"));
